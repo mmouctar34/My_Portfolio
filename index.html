@@ -6,7 +6,7 @@
 
 <!-- SEO -->
 <title>Moustapha Muctarr | Développeur Full Stack</title>
-<meta name="description" content="Portfolio de Moustapha Muctarr, développeur full stack (React, Supabase, JavaScript), cofondateur de Madior Insight. Étudiant en DUT Développement Web/Mobile &amp; Multimédia à l'UCAD-CURI. CV à télécharger.">
+<meta name="description" content="Portfolio de Moustapha Muctarr, développeur full stack (React, Supabase, JavaScript), CTO de Madior Insight. Étudiant en DUT Développement Web/Mobile &amp; Multimédia à l'UCAD-CURI. CV à télécharger.">
 <meta name="keywords" content="Moustapha Muctarr, Développeur Full Stack, React, Supabase, JavaScript, Madior Insight, Dakar, Sénégal, Portfolio, CV">
 <meta name="author" content="Moustapha Muctarr">
 <meta property="og:type" content="website">
@@ -409,6 +409,21 @@ html[data-theme="light"] .theme-toggle .icon-moon { opacity: 0; transform: rotat
 .project-techs { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
 .tech-pill { padding: 0.25rem 0.6rem; background: rgba(255,255,255,0.04); border: 1px solid var(--border-light); border-radius: var(--radius-full); font-size: 0.7rem; font-family: var(--font-mono); color: var(--text-dim); }
 .project-links { margin-top: auto; }
+.project-role { font-size: 0.72rem; font-family: var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent-emerald); margin-bottom: 0.5rem; }
+.project-features { list-style: none; margin: 0 0 1.1rem; padding: 0; display: grid; gap: 0.45rem; }
+.project-features li { position: relative; padding-left: 1.4rem; font-size: 0.88rem; color: var(--text-muted); }
+.project-features li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent-emerald); box-shadow: 0 0 8px rgba(16,185,129,0.6); }
+.project-features strong { color: var(--text-main, inherit); }
+.project-featured .project-title { font-size: 1.5rem; }
+@media (min-width: 1001px) {
+  .project-featured { grid-column: 1 / -1; flex-direction: row; height: auto; }
+  .project-featured .project-thumbnail { width: 36%; height: auto; min-height: 320px; flex-shrink: 0; }
+  .project-featured .project-body { padding: 2rem 2.2rem; justify-content: center; }
+  .project-featured .project-desc { flex-grow: 0; font-size: 0.95rem; }
+  .project-featured .thumb-icon { font-size: 4.5rem; }
+}
+@media (max-width: 1000px) { .project-featured { grid-column: 1 / -1; } }
+@media (max-width: 680px) { .project-featured .project-title { font-size: 1.25rem; } }
 
 /* ========== TIMELINE ========== */
 .timeline-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
@@ -556,7 +571,7 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
           </div>
 
           <p class="hero-bio" data-i18n-html="hero.bio">
-            Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile &amp; Multimédia</strong> à l'UCAD-CURI, je conçois des applications complètes de bout en bout. Cofondateur de <strong>Madior Insight</strong>, je travaille avec <strong>JavaScript, React et Supabase</strong> et je m'intéresse à la cybersécurité, au DevOps et à la data.
+            Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile &amp; Multimédia</strong> à l'UCAD-CURI, je conçois des applications complètes de bout en bout. CTO de <strong>Madior Insight</strong>, je travaille avec <strong>JavaScript, React et Supabase</strong> et je m'intéresse à la cybersécurité, au DevOps et à la data.
           </p>
 
           <div class="hero-ctas">
@@ -699,7 +714,7 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
 
         <div class="about-text reveal-fade-up reveal-delay-1">
           <p data-i18n-html="about.p1">
-            Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile &amp; Multimédia</strong> à l'Université Cheikh Anta Diop (UCAD-CURI, soutenance prévue fin 2027), je conçois et réalise des applications de bout en bout, de la modélisation à la mise en production. Cofondateur de <strong>Madior Insight</strong>, une plateforme e-learning que je développe de A à Z.
+            Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile &amp; Multimédia</strong> à l'Université Cheikh Anta Diop (UCAD-CURI, soutenance prévue fin 2027), je conçois et réalise des applications de bout en bout, de la modélisation à la mise en production. CTO de <strong>Madior Insight</strong>, une plateforme e-learning dont je développe la partie technique de A à Z.
           </p>
           <p data-i18n-html="about.p2">
             J'ai une expérience pratique de la conception d'applications métier et de la gestion de bases de données : gestion de stock avec paiement mobile (<strong>Wave / Orange Money</strong>), application web de leadership et de confiance en soi, assistant IA vocal. Mon expérience en gestion de vente et en accompagnement de projets complète ma compréhension des usages réels. Je recherche un <strong>stage, une alternance ou un premier poste</strong> en développement web/mobile/multimédia, au Sénégal, à l'international ou en remote.
@@ -847,7 +862,7 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
 
       <div class="projects-grid">
         <!-- Projet 0: Madior Insight -->
-        <article class="glass-card project-card reveal-fade-up" data-category="web">
+        <article class="glass-card project-card project-featured reveal-fade-up" data-category="web">
           <div class="project-thumbnail">
             <span class="project-category-badge" data-i18n="proj.cat.wip">En développement</span>
             <div class="project-thumb-art">
@@ -856,16 +871,29 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
             </div>
           </div>
           <div class="project-body">
+            <span class="project-role" data-i18n="proj.p0.role">Projet phare · CTO</span>
             <h3 class="project-title">Madior Insight</h3>
             <p class="project-desc" data-i18n-html="proj.p0.desc">
-              Plateforme e-learning pour les élèves en gestion (notamment de STEG), dont je suis <strong>cofondateur</strong> et que je développe de A à Z : paiements Wave, assistant IA et cours chargés à la demande.
+              Plateforme e-learning pour les élèves en gestion (notamment de STEG), dont je suis le <strong>CTO</strong> (directeur technique). Je la conçois et la développe de A à Z, de l'architecture à l'interface, en passant par la base de données et les paiements.
             </p>
+            <ul class="project-features">
+              <li data-i18n-html="proj.p0.f1">Paiement mobile avec <strong>Wave</strong></li>
+              <li data-i18n-html="proj.p0.f2">Assistant IA propulsé par <strong>Gemini</strong></li>
+              <li data-i18n-html="proj.p0.f3">Cours chargés à la demande (<em>lazy loading</em>) pour un affichage rapide</li>
+              <li data-i18n-html="proj.p0.f4">Backend <strong>Supabase</strong> (PostgreSQL)</li>
+              <li data-i18n-html="proj.p0.f5">Ressources via <strong>Google Drive</strong> et actualités via flux <strong>RSS</strong></li>
+            </ul>
             <div class="project-techs">
               <span class="tech-pill">React 19</span>
+              <span class="tech-pill">React Router 7</span>
+              <span class="tech-pill">Vite 8</span>
+              <span class="tech-pill">Tailwind CSS 3</span>
               <span class="tech-pill">Supabase</span>
-              <span class="tech-pill">Tailwind CSS</span>
+              <span class="tech-pill">PostgreSQL</span>
               <span class="tech-pill">Wave</span>
               <span class="tech-pill">Gemini</span>
+              <span class="tech-pill">Google Drive</span>
+              <span class="tech-pill">RSS</span>
             </div>
           </div>
         </article>
@@ -995,11 +1023,11 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
               <div class="timeline-dot"></div>
               <div class="glass-card timeline-card">
                 <span class="timeline-date" data-i18n="exp.e0.date">En cours</span>
-                <h4 class="timeline-title" data-i18n="exp.e0.title">Cofondateur &amp; Développeur — Madior Insight</h4>
+                <h4 class="timeline-title" data-i18n="exp.e0.title">CTO &amp; Développeur — Madior Insight</h4>
                 <div class="timeline-place"><i class="fa-solid fa-rocket"></i> <span data-i18n="exp.e0.place">Projet professionnel · Plateforme e-learning</span></div>
                 <div class="timeline-desc">
                   <ul>
-                    <li data-i18n="exp.e0.b1">Cofondateur et développeur de A à Z d'une plateforme e-learning (application web, en cours de développement) pour les élèves en gestion, notamment de STEG</li>
+                    <li data-i18n="exp.e0.b1">CTO et développeur de A à Z d'une plateforme e-learning (application web, en cours de développement) pour les élèves en gestion, notamment de STEG</li>
                     <li data-i18n="exp.e0.b2">Stack : React 19, Vite, Tailwind CSS, Supabase (PostgreSQL, authentification, Edge Functions)</li>
                     <li data-i18n="exp.e0.b3">Paiements Wave, assistant IA (Google Gemini) et gestion de projet de bout en bout : cadrage, modélisation, réalisation, suivi</li>
                   </ul>
@@ -1216,7 +1244,7 @@ const I18N = {
     "hero.badge": "Disponible pour de nouveaux projets & opportunités",
     "hero.greeting": "Bonjour, je suis",
     "hero.name": "Moustapha Muctarr",
-    "hero.bio": "Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile & Multimédia</strong> à l'UCAD-CURI, je conçois des applications complètes de bout en bout. Cofondateur de <strong>Madior Insight</strong>, je travaille avec <strong>JavaScript, React et Supabase</strong> et je m'intéresse à la cybersécurité, au DevOps et à la data.",
+    "hero.bio": "Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile & Multimédia</strong> à l'UCAD-CURI, je conçois des applications complètes de bout en bout. CTO de <strong>Madior Insight</strong>, je travaille avec <strong>JavaScript, React et Supabase</strong> et je m'intéresse à la cybersécurité, au DevOps et à la data.",
     "cv.download": "Télécharger mon CV", "cv.label": "Curriculum Vitae",
     "hero.cta1": "Découvrir mes Projets", "hero.cta2": "Me Contacter",
     "stats.projects": "Projets Majeurs Réalisés", "stats.years": "Années d'Expérience Terrain",
@@ -1226,7 +1254,7 @@ const I18N = {
     "about.role": "Développeur Full Stack", "about.loc": "Localisation",
     "about.formation": "Formation", "about.formationVal": "DUT Dev Web/Mobile & Multimédia",
     "about.available": "Disponibilité", "about.availableVal": "Immédiate",
-    "about.p1": "Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile & Multimédia</strong> à l'Université Cheikh Anta Diop (UCAD-CURI, soutenance prévue fin 2027), je conçois et réalise des applications de bout en bout, de la modélisation à la mise en production. Cofondateur de <strong>Madior Insight</strong>, une plateforme e-learning que je développe de A à Z.",
+    "about.p1": "Développeur full stack et étudiant en <strong>DUT Développement Web/Mobile & Multimédia</strong> à l'Université Cheikh Anta Diop (UCAD-CURI, soutenance prévue fin 2027), je conçois et réalise des applications de bout en bout, de la modélisation à la mise en production. CTO de <strong>Madior Insight</strong>, une plateforme e-learning dont je développe la partie technique de A à Z.",
     "about.p2": "J'ai une expérience pratique de la conception d'applications métier et de la gestion de bases de données : gestion de stock avec paiement mobile (<strong>Wave / Orange Money</strong>), application web de leadership et de confiance en soi, assistant IA vocal. Mon expérience en gestion de vente et en accompagnement de projets complète ma compréhension des usages réels. Je recherche un <strong>stage, une alternance ou un premier poste</strong> en développement web/mobile/multimédia, au Sénégal, à l'international ou en remote.",
     "about.pillar1": "Architecture Full-Stack", "about.pillar1d": "Maîtrise complète de la chaîne de valeur, du schéma de base de données à l'interface utilisateur.",
     "about.pillar2": "Performance & Code Propre", "about.pillar2d": "Code modulaire, structuré, facile à maintenir et optimisé pour la rapidité d'exécution.",
@@ -1246,7 +1274,13 @@ const I18N = {
     "proj.filter.fintech": "Fintech & E-commerce", "proj.filter.ia": "IA & Innovation",
     "proj.cat.fintech": "Fintech & Retail", "proj.cat.web": "Web Vitrine",
     "proj.cat.ia": "Intelligence Artificielle", "proj.cat.wip": "En développement",
-    "proj.p0.desc": "Plateforme e-learning pour les élèves en gestion (notamment de STEG), dont je suis <strong>cofondateur</strong> et que je développe de A à Z : paiements Wave, assistant IA et cours chargés à la demande.",
+    "proj.p0.role": "Projet phare · CTO",
+    "proj.p0.desc": "Plateforme e-learning pour les élèves en gestion (notamment de STEG), dont je suis le <strong>CTO</strong> (directeur technique). Je la conçois et la développe de A à Z, de l'architecture à l'interface, en passant par la base de données et les paiements.",
+    "proj.p0.f1": "Paiement mobile avec <strong>Wave</strong>",
+    "proj.p0.f2": "Assistant IA propulsé par <strong>Gemini</strong>",
+    "proj.p0.f3": "Cours chargés à la demande (<em>lazy loading</em>) pour un affichage rapide",
+    "proj.p0.f4": "Backend <strong>Supabase</strong> (PostgreSQL)",
+    "proj.p0.f5": "Ressources via <strong>Google Drive</strong> et actualités via flux <strong>RSS</strong>",
     "proj.p1.title": "Ma Boutique Dakar",
     "proj.p1.desc": "Application de gestion de stock et de ventes pour le commerce de détail sénégalais. Flux de paiement mobile intégrés <strong>Wave</strong> et <strong>Orange Money</strong> en FCFA.",
     "proj.p2.desc": "Site institutionnel complet avec CRUD en JavaScript vanilla. Déployé sur GitHub Pages et testé par de vrais utilisateurs du centre de formation.",
@@ -1257,9 +1291,9 @@ const I18N = {
     "exp.tag": "Parcours", "exp.title1": "Expériences &", "exp.title2": "Formations",
     "exp.sub": "Mon cheminement professionnel et les diplômes validés tout au long de mon parcours.",
     "exp.pro": "Expériences Professionnelles", "exp.edu": "Formations & Diplômes",
-    "exp.e0.date": "En cours", "exp.e0.title": "Cofondateur & Développeur — Madior Insight",
+    "exp.e0.date": "En cours", "exp.e0.title": "CTO & Développeur — Madior Insight",
     "exp.e0.place": "Projet professionnel · Plateforme e-learning",
-    "exp.e0.b1": "Cofondateur et développeur de A à Z d'une plateforme e-learning (application web, en cours de développement) pour les élèves en gestion, notamment de STEG",
+    "exp.e0.b1": "CTO et développeur de A à Z d'une plateforme e-learning (application web, en cours de développement) pour les élèves en gestion, notamment de STEG",
     "exp.e0.b2": "Stack : React 19, Vite, Tailwind CSS, Supabase (PostgreSQL, authentification, Edge Functions)",
     "exp.e0.b3": "Paiements Wave, assistant IA (Google Gemini) et gestion de projet de bout en bout : cadrage, modélisation, réalisation, suivi",
     "exp.s0.title": "Développeur web — SPLEAD", "exp.s0.place": "Projet professionnel",
@@ -1302,7 +1336,7 @@ const I18N = {
     "hero.badge": "Available for new projects & opportunities",
     "hero.greeting": "Hello, I am",
     "hero.name": "Moustapha Muctarr",
-    "hero.bio": "Full stack developer and <strong>Web/Mobile & Multimedia Development</strong> (DUT) student at UCAD-CURI, I build complete applications end to end. Co-founder of <strong>Madior Insight</strong>, I work with <strong>JavaScript, React and Supabase</strong> and I am interested in cybersecurity, DevOps and data.",
+    "hero.bio": "Full stack developer and <strong>Web/Mobile & Multimedia Development</strong> (DUT) student at UCAD-CURI, I build complete applications end to end. CTO of <strong>Madior Insight</strong>, I work with <strong>JavaScript, React and Supabase</strong> and I am interested in cybersecurity, DevOps and data.",
     "cv.download": "Download my CV", "cv.label": "Curriculum Vitae",
     "hero.cta1": "Discover my Projects", "hero.cta2": "Contact Me",
     "stats.projects": "Major Projects Delivered", "stats.years": "Years of Experience",
@@ -1312,7 +1346,7 @@ const I18N = {
     "about.role": "Full Stack Developer", "about.loc": "Location",
     "about.formation": "Education", "about.formationVal": "DUT Web/Mobile & Multimedia Dev",
     "about.available": "Availability", "about.availableVal": "Immediate",
-    "about.p1": "Full stack developer and <strong>Web/Mobile & Multimedia Development</strong> (DUT) student at Cheikh Anta Diop University (UCAD-CURI, defence planned for late 2027), I design and build applications end to end, from modelling to production. Co-founder of <strong>Madior Insight</strong>, an e-learning platform I am developing from A to Z.",
+    "about.p1": "Full stack developer and <strong>Web/Mobile & Multimedia Development</strong> (DUT) student at Cheikh Anta Diop University (UCAD-CURI, defence planned for late 2027), I design and build applications end to end, from modelling to production. CTO of <strong>Madior Insight</strong>, an e-learning platform whose technical side I am building from A to Z.",
     "about.p2": "I have hands-on experience designing business applications and managing databases: inventory management with mobile payment (<strong>Wave / Orange Money</strong>), a leadership and self-confidence web app, a voice AI assistant. My experience in sales and project mentoring completes my understanding of real-world use cases. I am looking for an <strong>internship, work-study or first job</strong> in web/mobile/multimedia development, in Senegal, abroad or remote.",
     "about.pillar1": "Full-Stack Architecture", "about.pillar1d": "Complete mastery of the value chain, from database schema to user interface.",
     "about.pillar2": "Performance & Clean Code", "about.pillar2d": "Modular, structured code, easy to maintain and optimized for execution speed.",
@@ -1332,7 +1366,13 @@ const I18N = {
     "proj.filter.fintech": "Fintech & E-commerce", "proj.filter.ia": "AI & Innovation",
     "proj.cat.fintech": "Fintech & Retail", "proj.cat.web": "Showcase Web",
     "proj.cat.ia": "Artificial Intelligence", "proj.cat.wip": "In development",
-    "proj.p0.desc": "E-learning platform for management students (notably STEG), which I <strong>co-founded</strong> and am developing from A to Z: Wave payments, an AI assistant and on-demand course loading.",
+    "proj.p0.role": "Flagship project · CTO",
+    "proj.p0.desc": "E-learning platform for management students (notably STEG), where I am the <strong>CTO</strong> (head of technology). I design and build it from A to Z, from architecture to interface, including the database and payments.",
+    "proj.p0.f1": "Mobile payments with <strong>Wave</strong>",
+    "proj.p0.f2": "AI assistant powered by <strong>Gemini</strong>",
+    "proj.p0.f3": "Courses loaded on demand (<em>lazy loading</em>) for fast display",
+    "proj.p0.f4": "<strong>Supabase</strong> backend (PostgreSQL)",
+    "proj.p0.f5": "Resources via <strong>Google Drive</strong> and news via <strong>RSS</strong> feeds",
     "proj.p1.title": "Ma Boutique Dakar",
     "proj.p1.desc": "Inventory and sales management app for Senegalese retail. Integrated mobile payment flows with <strong>Wave</strong> and <strong>Orange Money</strong> in FCFA.",
     "proj.p2.desc": "Full institutional website with vanilla JavaScript CRUD. Deployed on GitHub Pages and tested by real users of the training center.",
@@ -1343,9 +1383,9 @@ const I18N = {
     "exp.tag": "Journey", "exp.title1": "Experience &", "exp.title2": "Education",
     "exp.sub": "My professional path and the degrees validated throughout my journey.",
     "exp.pro": "Professional Experience", "exp.edu": "Education & Degrees",
-    "exp.e0.date": "Ongoing", "exp.e0.title": "Co-founder & Developer — Madior Insight",
+    "exp.e0.date": "Ongoing", "exp.e0.title": "CTO & Developer — Madior Insight",
     "exp.e0.place": "Professional project · E-learning platform",
-    "exp.e0.b1": "Co-founder and developer, from A to Z, of an e-learning platform (web app, in development) for management students, notably STEG",
+    "exp.e0.b1": "CTO and developer, from A to Z, of an e-learning platform (web app, in development) for management students, notably STEG",
     "exp.e0.b2": "Stack: React 19, Vite, Tailwind CSS, Supabase (PostgreSQL, authentication, Edge Functions)",
     "exp.e0.b3": "Wave payments, AI assistant (Google Gemini) and end-to-end project management: scoping, modelling, delivery, follow-up",
     "exp.s0.title": "Web Developer — SPLEAD", "exp.s0.place": "Professional project",
@@ -1450,14 +1490,14 @@ document.querySelectorAll('.lang-opt').forEach(opt => {
 const rolesFR = [
   'Développeur Full Stack',
   'Étudiant en DUT Dev Web & Mobile',
-  'Cofondateur de Madior Insight',
+  'CTO de Madior Insight',
   'Passionné par l\'IA appliquée',
   'Curieux de cybersécurité, DevOps & Data'
 ];
 const rolesEN = [
   'Full Stack Developer',
   'Web & Mobile Dev Student (DUT)',
-  'Co-founder of Madior Insight',
+  'CTO of Madior Insight',
   'Passionate about Applied AI',
   'Curious about Cybersecurity, DevOps & Data'
 ];
