@@ -415,8 +415,11 @@ html[data-theme="light"] .theme-toggle .icon-moon { opacity: 0; transform: rotat
 .project-features li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--accent-emerald); box-shadow: 0 0 8px rgba(16,185,129,0.6); }
 .project-features strong { color: var(--text-main, inherit); }
 .project-featured .project-title { font-size: 1.5rem; }
-.project-featured .project-thumbnail { height: clamp(220px, 34vw, 400px); background: #f6efe8; }
-.project-shot { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.project-featured .project-thumbnail { height: auto; aspect-ratio: 1400 / 641; background: #f6efe8; border-bottom: 1px solid var(--border-light); }
+.project-shot { width: 100%; height: 100%; object-fit: contain; display: block; }
+.project-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-bottom: 0.6rem; }
+.project-meta .project-role { margin-bottom: 0; }
+.project-meta .project-category-badge { position: static; }
 .project-featured .project-body { padding: 1.75rem 2rem 2rem; }
 .project-featured .project-desc { flex-grow: 0; font-size: 0.95rem; max-width: 70ch; }
 @media (min-width: 761px) { .project-featured .project-features { grid-template-columns: repeat(2, 1fr); gap: 0.6rem 2rem; } }
@@ -862,11 +865,13 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
         <!-- Projet 0: Madior Insight -->
         <article class="glass-card project-card project-featured reveal-fade-up" data-category="web">
           <div class="project-thumbnail">
-            <span class="project-category-badge" data-i18n="proj.cat.wip">En développement</span>
             <img class="project-shot" src="madior-insight.jpg" alt="Page d'accueil de la plateforme Madior Insight" loading="lazy" width="1400" height="641">
           </div>
           <div class="project-body">
-            <span class="project-role" data-i18n="proj.p0.role">Projet phare · CTO</span>
+            <div class="project-meta">
+              <span class="project-role" data-i18n="proj.p0.role">Projet phare · CTO</span>
+              <span class="project-category-badge" data-i18n="proj.cat.wip">En développement</span>
+            </div>
             <h3 class="project-title">Madior Insight</h3>
             <p class="project-desc" data-i18n-html="proj.p0.desc">
               Plateforme e-learning pour les élèves en gestion (notamment de STEG), dont je suis le <strong>CTO</strong> (directeur technique). Je la conçois et la développe de A à Z, de l'architecture à l'interface, en passant par la base de données et les paiements.
