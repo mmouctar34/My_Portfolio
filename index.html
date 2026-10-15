@@ -394,7 +394,7 @@ html[data-theme="light"] .theme-toggle .icon-moon { opacity: 0; transform: rotat
 .project-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
 .filter-btn { padding: 0.6rem 1.4rem; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-full); color: var(--text-muted); font-size: 0.9rem; font-weight: 500; transition: var(--transition-normal); }
 .filter-btn:hover, .filter-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; box-shadow: 0 4px 15px var(--primary-glow); }
-.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 @media (max-width: 1000px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 680px) { .projects-grid { grid-template-columns: 1fr; } }
 .project-card { display: flex; flex-direction: column; height: 100%; }
@@ -424,6 +424,11 @@ html[data-theme="light"] .theme-toggle .icon-moon { opacity: 0; transform: rotat
 .project-featured .project-desc { flex-grow: 0; font-size: 0.95rem; max-width: 70ch; }
 @media (min-width: 761px) { .project-featured .project-features { grid-template-columns: repeat(2, 1fr); gap: 0.6rem 2rem; } }
 .project-featured { grid-column: 1 / -1; height: auto; }
+.projects-grid .project-card:not(.project-featured) .project-thumbnail { height: auto; aspect-ratio: 1400 / 641; background: #f6efe8; border-bottom: 1px solid var(--border-light); }
+.projects-grid .project-card:not(.project-featured) .project-thumb-art { background: linear-gradient(135deg, #111827 0%, #1e293b 100%); }
+.project-card:not(.project-featured) .project-features { margin-bottom: 1rem; }
+.project-card:not(.project-featured) .project-features li { font-size: 0.85rem; }
+.project-card .project-meta { margin-bottom: 0.5rem; }
 @media (max-width: 680px) { .project-featured .project-title { font-size: 1.25rem; } }
 
 /* ========== TIMELINE ========== */
@@ -928,17 +933,19 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
         <!-- Projet 2: Site CURI-UCAD -->
         <article class="glass-card project-card reveal-fade-up reveal-delay-1" data-category="web">
           <div class="project-thumbnail">
-            <span class="project-category-badge" data-i18n="proj.cat.web">Web Vitrine</span>
-            <div class="project-thumb-art">
-              <div class="thumb-bg-glow" style="background: rgba(59, 130, 246, 0.4);"></div>
-              <i class="fa-solid fa-globe thumb-icon text-primary"></i>
-            </div>
+            <img class="project-shot" src="curi.jpg" alt="Page d'accueil du site du CURI — UCAD" loading="lazy" width="1400" height="641">
           </div>
           <div class="project-body">
+            <div class="project-meta"><span class="project-category-badge" data-i18n="proj.cat.web">Web Vitrine</span></div>
             <h3 class="project-title">Site CURI — UCAD</h3>
             <p class="project-desc" data-i18n="proj.p2.desc">
               Site institutionnel complet avec CRUD en JavaScript vanilla. Déployé sur GitHub Pages et testé par de vrais utilisateurs du centre de formation.
             </p>
+            <ul class="project-features">
+              <li data-i18n-html="proj.p2.f1">Diaporama d'accueil automatique et navigation par sections</li>
+              <li data-i18n-html="proj.p2.f2">Formations par année et par filière (<strong>Développement Web</strong>, <strong>Marketing digital</strong>), avec les diplômés</li>
+              <li data-i18n-html="proj.p2.f3">Actualités, équipe pédagogique et contact</li>
+            </ul>
             <div class="project-techs">
               <span class="tech-pill">JavaScript</span>
               <span class="tech-pill">CRUD</span>
@@ -955,17 +962,19 @@ html[data-theme="light"] .footer { background: rgba(225, 232, 250, 0.97); }
         <!-- Projet 3: Programme Élite 221 -->
         <article class="glass-card project-card reveal-fade-up reveal-delay-2" data-category="web">
           <div class="project-thumbnail">
-            <span class="project-category-badge" data-i18n="proj.cat.web">Web App</span>
-            <div class="project-thumb-art">
-              <div class="thumb-bg-glow" style="background: rgba(139, 92, 246, 0.4);"></div>
-              <i class="fa-solid fa-graduation-cap thumb-icon" style="color: #a78bfa;"></i>
-            </div>
+            <img class="project-shot" src="splead.jpg" alt="Écran des modules de l'application SPLEAD" loading="lazy" width="1400" height="641">
           </div>
           <div class="project-body">
+            <div class="project-meta"><span class="project-category-badge" data-i18n="proj.cat.web">Web App</span></div>
             <h3 class="project-title">SPLEAD</h3>
             <p class="project-desc" data-i18n="proj.p3.desc">
-              Application web de formation modulaire (HTML/CSS/JavaScript) dédiée à la confiance en soi, au leadership et aux compétences associées.
+              Application web de formation « Xam Sa Bop » (Programme Élite 221, devenu SPLEAD) en HTML/CSS/JavaScript, dédiée à la prise de parole, au leadership et au développement personnel.
             </p>
+            <ul class="project-features">
+              <li data-i18n-html="proj.p3.f1"><strong>3 modules</strong> : prise de parole, leadership moderne, développement personnel</li>
+              <li data-i18n-html="proj.p3.f2"><strong>12 leçons</strong> avec exercices pratiques et suivi de progression</li>
+              <li data-i18n-html="proj.p3.f3"><strong>Quiz final</strong> de 8 questions corrigées</li>
+            </ul>
             <div class="project-techs">
               <span class="tech-pill">HTML/CSS/JS</span>
               <span class="tech-pill">Modules</span>
@@ -1284,7 +1293,13 @@ const I18N = {
     "proj.p1.title": "Ma Boutique Dakar",
     "proj.p1.desc": "Application de gestion de stock et de ventes pour le commerce de détail sénégalais. Flux de paiement mobile intégrés <strong>Wave</strong> et <strong>Orange Money</strong> en FCFA.",
     "proj.p2.desc": "Site institutionnel complet avec CRUD en JavaScript vanilla. Déployé sur GitHub Pages et testé par de vrais utilisateurs du centre de formation.",
-    "proj.p3.desc": "Application web de formation modulaire (HTML/CSS/JavaScript) dédiée à la confiance en soi, au leadership et aux compétences associées.",
+    "proj.p3.desc": "Application web de formation « Xam Sa Bop » (Programme Élite 221, devenu SPLEAD) en HTML/CSS/JavaScript, dédiée à la prise de parole, au leadership et au développement personnel.",
+    "proj.p2.f1": "Diaporama d'accueil automatique et navigation par sections",
+    "proj.p2.f2": "Formations par année et par filière (<strong>Développement Web</strong>, <strong>Marketing digital</strong>), avec les diplômés",
+    "proj.p2.f3": "Actualités, équipe pédagogique et contact",
+    "proj.p3.f1": "<strong>3 modules</strong> : prise de parole, leadership moderne, développement personnel",
+    "proj.p3.f2": "<strong>12 leçons</strong> avec exercices pratiques et suivi de progression",
+    "proj.p3.f3": "<strong>Quiz final</strong> de 8 questions corrigées",
     "proj.p4.title": "Assistant IA — JARVIS",
     "proj.p4.desc": "Assistant vocal en Python intégrant les API IA de <strong>Gemini</strong> et <strong>Groq</strong>. Démarche itérative de product thinking : construction, test, amélioration continue.",
     "proj.details": "Détails du projet",
@@ -1376,7 +1391,13 @@ const I18N = {
     "proj.p1.title": "Ma Boutique Dakar",
     "proj.p1.desc": "Inventory and sales management app for Senegalese retail. Integrated mobile payment flows with <strong>Wave</strong> and <strong>Orange Money</strong> in FCFA.",
     "proj.p2.desc": "Full institutional website with vanilla JavaScript CRUD. Deployed on GitHub Pages and tested by real users of the training center.",
-    "proj.p3.desc": "Modular training web application (HTML/CSS/JavaScript) dedicated to self-confidence, leadership and related skills.",
+    "proj.p3.desc": "\"Xam Sa Bop\" training web app (Élite 221 Programme, now SPLEAD) in HTML/CSS/JavaScript, dedicated to public speaking, leadership and personal development.",
+    "proj.p2.f1": "Automatic home slideshow and section navigation",
+    "proj.p2.f2": "Programmes by year and track (<strong>Web Development</strong>, <strong>Digital Marketing</strong>), plus graduates",
+    "proj.p2.f3": "News, teaching staff and contact",
+    "proj.p3.f1": "<strong>3 modules</strong>: public speaking, modern leadership, personal development",
+    "proj.p3.f2": "<strong>12 lessons</strong> with practical exercises and progress tracking",
+    "proj.p3.f3": "<strong>Final quiz</strong> of 8 questions with explanations",
     "proj.p4.title": "AI Assistant — JARVIS",
     "proj.p4.desc": "Python voice assistant integrating <strong>Gemini</strong> and <strong>Groq</strong> AI APIs. Iterative product thinking approach: build, test, improve continuously.",
     "proj.details": "Project details",
